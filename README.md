@@ -13,7 +13,7 @@
 
 
 
-<b><a href="https://github.com/KranticNenad/finalProject/tree/master/BackEnd/Oracle%20Database">MS SQL Server Studio</a></b>
+<b><a href="https://github.com/ZoranKJava/LibraryManagementProject/tree/master/MS%20SQL%20DATABASE">MS SQL Server Studio</a></b>
  * <i>Entity framework</i>
  * <i>Navicat modeling</i>
  * <i>Queries</i>
