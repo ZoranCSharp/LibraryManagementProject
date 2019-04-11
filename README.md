@@ -21,7 +21,7 @@
   
  <br>
 <p align="center">
-<a href=""><img width=550px href="https://github.com/KranticNenad/finalProject/tree/master/BackEnd/Oracle%20Database" src="https://github.com/ZoranKJava/LibraryManagementProject/blob/master/MS%20SQL%20DATABASE/DiagramLibrary.png"></a></p>
+<a href=""><img width=750px href="https://github.com/KranticNenad/finalProject/tree/master/BackEnd/Oracle%20Database" src="https://github.com/ZoranKJava/LibraryManagementProject/blob/master/MS%20SQL%20DATABASE/DiagramLibrary.png"></a></p>
  
 <b><a href="https://github.com/ZoranKJava/LibraryManagementProject/tree/master/LibraryManagement">ASP.Net</a></b>
  * <i>Entity Framework</i>
