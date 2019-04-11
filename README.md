@@ -23,7 +23,7 @@
 <p align="center">
 <a href=""><img width=550px href="https://github.com/KranticNenad/finalProject/tree/master/BackEnd/Oracle%20Database" src="https://github.com/ZoranKJava/gifs/blob/master/ERD1.4.PNG"></a></p>
  
-<b><a href="https://github.com/KranticNenad/finalProject/tree/master/BackEnd/Spring">ASP.Net</a></b>
+<b><a href="https://github.com/ZoranKJava/LibraryManagementProject/tree/master/LibraryManagement">ASP.Net</a></b>
  * <i>Entity Framework</i>
  * <i>.Net</i>
  * <i>Visual Studio 2017</i>
