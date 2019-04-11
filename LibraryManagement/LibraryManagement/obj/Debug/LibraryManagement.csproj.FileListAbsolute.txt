@@ -1,0 +1,160 @@
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\LibraryManagement.dll.config
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\LibraryManagement.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\LibraryManagement.pdb
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\csc.exe
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\csc.exe.config
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\csc.rsp
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\csi.exe
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\csi.exe.config
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\csi.rsp
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.AppContext.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.Console.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.IO.Compression.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.IO.Pipes.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.Security.Claims.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.ValueTuple.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.Xml.XPath.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\vbc.exe
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\vbc.exe.config
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\vbc.rsp
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\VBCSCompiler.exe
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\Antlr3.Runtime.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\EntityFramework.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\EntityFramework.SqlServer.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\Newtonsoft.Json.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\System.Web.Helpers.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\System.Web.Mvc.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\System.Web.Optimization.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\System.Web.Razor.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Deployment.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Razor.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\WebGrease.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\EntityFramework.xml
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\EntityFramework.SqlServer.xml
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\System.Web.Helpers.xml
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\System.Web.Mvc.xml
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\System.Web.Optimization.xml
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\System.Web.Razor.xml
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.xml
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Deployment.xml
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Razor.xml
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\Newtonsoft.Json.xml
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\Antlr3.Runtime.pdb
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csprojAssemblyReference.cache
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.CoreCompileInputs.cache
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.CopyComplete
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.dll
+C:\Users\bozidar.grabovcic\source\repos\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\LibraryManagement.dll.config
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\LibraryManagement.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\LibraryManagement.pdb
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\csc.exe
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\csc.exe.config
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\csc.rsp
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\csi.exe
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\csi.exe.config
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\csi.rsp
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.AppContext.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.Console.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.IO.Compression.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.IO.Pipes.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.Security.Claims.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.ValueTuple.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.Xml.XPath.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\vbc.exe
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\vbc.exe.config
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\vbc.rsp
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\VBCSCompiler.exe
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\Antlr3.Runtime.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\EntityFramework.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\EntityFramework.SqlServer.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\Newtonsoft.Json.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\System.Web.Helpers.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\System.Web.Mvc.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\System.Web.Optimization.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\System.Web.Razor.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Deployment.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Razor.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\WebGrease.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\EntityFramework.xml
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\EntityFramework.SqlServer.xml
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\System.Web.Helpers.xml
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\System.Web.Mvc.xml
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\System.Web.Optimization.xml
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\System.Web.Razor.xml
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.xml
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Deployment.xml
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\System.Web.WebPages.Razor.xml
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\Newtonsoft.Json.xml
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\Antlr3.Runtime.pdb
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csprojAssemblyReference.cache
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.CoreCompileInputs.cache
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.CopyComplete
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.dll
+C:\Users\zoran.kovacevic\Desktop\Library Menagement Project\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
