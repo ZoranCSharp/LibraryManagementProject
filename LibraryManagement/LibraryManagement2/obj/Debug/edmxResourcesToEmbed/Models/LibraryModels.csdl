@@ -25,7 +25,6 @@
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="RoleID" Type="Int32" />
     <Property Name="LibraryID" Type="Int32" />
-    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Issueds" Relationship="Self.EmployeeFK" FromRole="Employee" ToRole="Issued" />
     <NavigationProperty Name="Library" Relationship="Self.LibraryFK2" FromRole="Employee" ToRole="Library" />
     <NavigationProperty Name="Role" Relationship="Self.RoleFK" FromRole="Employee" ToRole="Role" />
@@ -59,7 +58,6 @@
     <Property Name="LibraryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Zip" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Books" Relationship="Self.LibraryFK" FromRole="Library" ToRole="Book" />
     <NavigationProperty Name="Employees" Relationship="Self.LibraryFK2" FromRole="Library" ToRole="Employee" />

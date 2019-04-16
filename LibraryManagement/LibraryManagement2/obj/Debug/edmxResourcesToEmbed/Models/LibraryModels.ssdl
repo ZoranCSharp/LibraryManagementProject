@@ -21,7 +21,6 @@
     <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="RoleID" Type="int" />
     <Property Name="LibraryID" Type="int" />
-    <Property Name="Password" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Genre">
     <Key>
@@ -48,7 +47,6 @@
     <Property Name="LibraryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="State" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Zip" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Member">

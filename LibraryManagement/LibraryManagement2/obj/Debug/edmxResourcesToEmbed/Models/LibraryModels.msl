@@ -22,7 +22,6 @@
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="RoleID" ColumnName="RoleID" />
           <ScalarProperty Name="LibraryID" ColumnName="LibraryID" />
-          <ScalarProperty Name="Password" ColumnName="Password" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -52,7 +51,6 @@
           <ScalarProperty Name="LibraryID" ColumnName="LibraryID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="City" ColumnName="City" />
-          <ScalarProperty Name="State" ColumnName="State" />
           <ScalarProperty Name="Zip" ColumnName="Zip" />
         </MappingFragment>
       </EntityTypeMapping>

@@ -42,11 +42,10 @@ namespace LibraryManagement2.Controllers
         }
 
         // POST: Libraries/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "LibraryID,Name,City,State,Zip")] Library library)
+        public ActionResult Create([Bind(Include = "LibraryID,Name,City,Zip")] Library library)
         {
             if (ModelState.IsValid)
             {
@@ -74,11 +73,10 @@ namespace LibraryManagement2.Controllers
         }
 
         // POST: Libraries/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "LibraryID,Name,City,State,Zip")] Library library)
+        public ActionResult Edit([Bind(Include = "LibraryID,Name,City,Zip")] Library library)
         {
             if (ModelState.IsValid)
             {
