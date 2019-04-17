@@ -317,11 +317,6 @@
     <Content Include="Views\Genres\Details.cshtml" />
     <Content Include="Views\Genres\Edit.cshtml" />
     <Content Include="Views\Genres\Index.cshtml" />
-    <Content Include="Views\Issueds\Create.cshtml" />
-    <Content Include="Views\Issueds\Delete.cshtml" />
-    <Content Include="Views\Issueds\Details.cshtml" />
-    <Content Include="Views\Issueds\Edit.cshtml" />
-    <Content Include="Views\Issueds\Index.cshtml" />
     <Content Include="Views\Members\Create.cshtml" />
     <Content Include="Views\Members\Delete.cshtml" />
     <Content Include="Views\Members\Details.cshtml" />
@@ -354,6 +349,11 @@
     <Content Include="Views\Libraries\Index.cshtml" />
     <Content Include="Views\Books\ReadOnly.cshtml" />
     <Content Include="Views\Members\ReadOnly.cshtml" />
+    <Content Include="Views\Issueds\Create.cshtml" />
+    <Content Include="Views\Issueds\Delete.cshtml" />
+    <Content Include="Views\Issueds\Details.cshtml" />
+    <Content Include="Views\Issueds\Edit.cshtml" />
+    <Content Include="Views\Issueds\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

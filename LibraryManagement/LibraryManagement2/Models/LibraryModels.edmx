@@ -38,7 +38,7 @@
           <Key>
             <PropertyRef Name="IssueID" />
           </Key>
-          <Property Name="IssueID" Type="int" Nullable="false" />
+          <Property Name="IssueID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IssuedDate" Type="date" Nullable="false" />
           <Property Name="ReturnDate" Type="date" Nullable="false" />
           <Property Name="BookID" Type="int" />
