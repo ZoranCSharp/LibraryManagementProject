@@ -1,6 +1,10 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url('../Pictures/biblioteka.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -22,3 +26,44 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+.jumbotron {
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 5%;
+    min-height: 500px;
+    color:#fff;
+    width:50%;
+    margin:0 auto;
+    margin-top:50px;
+    
+   
+}
+
+.registerLogin p {
+    font-size: 14px;
+    color: cyan;
+    padding:20px;
+    text-align:center;
+}
+.naslov p{
+    text-align:center;
+   font-size:55px
+}
+
+.podNaslov p {
+    text-align: center;
+    font-size:18px;
+    font-weight:thin;
+}
+
+.loginBtn {
+    margin: 0 auto;
+    padding:0 0 30px 0;
+}
+
+
+.checkbox{
+    margin-left:5%;
+}
+

@@ -23,27 +23,10 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("HOME", "Index", "Home")</li>
                     @*<li>@Html.ActionLink("About", "About", "Home")</li>*@
-
-                   
-                    @if (User.IsInRole("CanManageBooks"))
-                    {
-                        <li>@Html.ActionLink("MEMBERS", "Index", "Members")</li>
-                    }
-                    else
-                    {
-                        <li>@Html.ActionLink("MEMBERS", "ReadOnly", "Members")</li>
-                    }
-
-                    @if (User.IsInRole("CanManageBooks"))
-                    {
-                        <li>@Html.ActionLink("BOOKS", "Index", "Books") </li>
-                    }
-                    else
-                    {
-                        <li>@Html.ActionLink("BOOKS", "ReadOnly", "Books") </li>
-                    }
+                    <li>@Html.ActionLink("MEMBERS", "Index", "Members")</li>
+                    <li>@Html.ActionLink("BOOKS", "Index", "Books") </li>
                     <li>@Html.ActionLink("RENTAL SYSTEM", "Index", "Issueds") </li>
-                </ul>
+</ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
