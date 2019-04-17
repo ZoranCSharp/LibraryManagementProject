@@ -10,6 +10,7 @@ using LibraryManagement2.Models;
 
 namespace LibraryManagement2.Controllers
 {
+    [Authorize(Roles = "CanManageBooks")]
     public class PublishersController : Controller
     {
         private LibraryManagement2DbContext db = new LibraryManagement2DbContext();

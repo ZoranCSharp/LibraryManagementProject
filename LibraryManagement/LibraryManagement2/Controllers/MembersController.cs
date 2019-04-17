@@ -14,11 +14,20 @@ namespace LibraryManagement2.Controllers
     {
         private LibraryManagement2DbContext db = new LibraryManagement2DbContext();
 
+        public ActionResult ReadOnly()
+        {
+            var mem = db.Members.Include(m => m.MembershipType);
+
+            return View( mem.ToList());
+        }
+
         // GET: Members
         public ActionResult Index()
         {
-            var members = db.Members.Include(m => m.MembershipType);
-            return View(members.ToList());
+            
+                var members = db.Members.Include(m => m.MembershipType);
+                return View(members.ToList());
+            
         }
 
         // GET: Members/Details/5
@@ -37,6 +46,7 @@ namespace LibraryManagement2.Controllers
         }
 
         // GET: Members/Create
+        [Authorize(Roles = "CanManageBooks")]
         public ActionResult Create()
         {
             ViewBag.MembershipTypeID = new SelectList(db.MembershipTypes, "MembershipTypeID", "Name");
@@ -44,10 +54,10 @@ namespace LibraryManagement2.Controllers
         }
 
         // POST: Members/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "CanManageBooks")]
         public ActionResult Create([Bind(Include = "MemberID,FullName,Email,Phone,MembershipTypeID")] Member member)
         {
             if (ModelState.IsValid)
@@ -62,6 +72,7 @@ namespace LibraryManagement2.Controllers
         }
 
         // GET: Members/Edit/5
+        [Authorize(Roles = "CanManageBooks")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -78,10 +89,10 @@ namespace LibraryManagement2.Controllers
         }
 
         // POST: Members/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "CanManageBooks")]
         public ActionResult Edit([Bind(Include = "MemberID,FullName,Email,Phone,MembershipTypeID")] Member member)
         {
             if (ModelState.IsValid)
@@ -95,6 +106,7 @@ namespace LibraryManagement2.Controllers
         }
 
         // GET: Members/Delete/5
+        [Authorize(Roles = "CanManageBooks")]
         public ActionResult Delete(int? id)
         {
             if (id == null)

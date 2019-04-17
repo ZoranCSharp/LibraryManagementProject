@@ -6,19 +6,33 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using LibraryManagement2.Models;
+
 
 namespace LibraryManagement2.Controllers
 {
+    
     public class BooksController : Controller
     {
         private LibraryManagement2DbContext db = new LibraryManagement2DbContext();
 
         // GET: Books
+        
+        public ActionResult ReadOnly()
+        {
+            var read = db.Books.Include(b => b.Genre).Include(b => b.Library).Include(b => b.Publisher);
+
+            return View(read.ToList());
+        }
+
+        // [Authorize(Roles = "CanManageBooks")]
         public ActionResult Index()
         {
             var books = db.Books.Include(b => b.Genre).Include(b => b.Library).Include(b => b.Publisher);
+
             return View(books.ToList());
+
         }
 
         // GET: Books/Details/5
@@ -37,6 +51,7 @@ namespace LibraryManagement2.Controllers
         }
 
         // GET: Books/Create
+        [Authorize(Roles = "CanManageBooks")]
         public ActionResult Create()
         {
             ViewBag.GenreID = new SelectList(db.Genres, "GenreID", "Name");
@@ -46,8 +61,7 @@ namespace LibraryManagement2.Controllers
         }
 
         // POST: Books/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "BookID,Title,Author,Quantity,PublisherID,GenreID,LibraryID")] Book book)
@@ -66,6 +80,7 @@ namespace LibraryManagement2.Controllers
         }
 
         // GET: Books/Edit/5
+        [Authorize(Roles = "CanManageBooks")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -84,10 +99,10 @@ namespace LibraryManagement2.Controllers
         }
 
         // POST: Books/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "CanManageBooks")]
         public ActionResult Edit([Bind(Include = "BookID,Title,Author,Quantity,PublisherID,GenreID,LibraryID")] Book book)
         {
             if (ModelState.IsValid)
@@ -103,6 +118,7 @@ namespace LibraryManagement2.Controllers
         }
 
         // GET: Books/Delete/5
+        [Authorize(Roles = "CanManageBooks")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -120,6 +136,7 @@ namespace LibraryManagement2.Controllers
         // POST: Books/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "CanManageBooks")]
         public ActionResult DeleteConfirmed(int id)
         {
             Book book = db.Books.Find(id);

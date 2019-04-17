@@ -31,11 +31,14 @@
 
 @foreach (var item in Model) {
     <tr>
+        @{
+            string date = item.IssuedDate.ToShortDateString();
+        }
         <td>
-            @Html.DisplayFor(modelItem => item.IssuedDate)
+            @date
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ReturnDate)
+            @date
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Book.Title)
@@ -47,9 +50,9 @@
             @Html.DisplayFor(modelItem => item.Member.FullName)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IssueID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IssueID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IssueID })
+            @Html.ActionLink("Edit", "Edit", new {id = item.IssueID}) |
+            @Html.ActionLink("Details", "Details", new {id = item.IssueID}) |
+            @Html.ActionLink("Delete", "Delete", new {id = item.IssueID})
         </td>
     </tr>
 }

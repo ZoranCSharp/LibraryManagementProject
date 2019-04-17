@@ -10,9 +10,12 @@ using LibraryManagement2.Models;
 
 namespace LibraryManagement2.Controllers
 {
+    [Authorize(Roles = "CanManageBooks")]
     public class EmployeesController : Controller
     {
         private LibraryManagement2DbContext db = new LibraryManagement2DbContext();
+
+
 
         // GET: Employees
         public ActionResult Index()

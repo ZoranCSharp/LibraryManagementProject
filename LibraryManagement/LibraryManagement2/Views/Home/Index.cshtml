@@ -1,18 +1,25 @@
-﻿@{
+﻿@using System.Data
+@{
     ViewBag.Title = "Home Page";
 }
 
 <div class="jumbotron">
     <div>
+        @if (User.IsInRole("CanManageBooks")) { 
+
         @Html.ActionLink("MEMBERSHIP TYPES", "Index", "MembershipTypes")<br />
-       
         @Html.ActionLink("EMPLOYEES", "Index", "Employees")<br />
         @Html.ActionLink("GENRES", "Index", "Genres")<br />
-        
         @Html.ActionLink("PUBLISHERS", "Index", "Publishers")<br />
         @Html.ActionLink("LIBRARIES", "Index", "Libraries")<br />
-        @Html.ActionLink("ROLE", "Index", "Roles")<br />
-       
+      
+        }
+        else
+        {
+            <h1>PUBLIC LIBRARY</h1>
+        <div>Today is  @DateTime.Now.DayOfWeek, time: @DateTime.Now.Hour:@DateTime.Now.Minute</div>
+
+        }
     </div>
 </div>
 
