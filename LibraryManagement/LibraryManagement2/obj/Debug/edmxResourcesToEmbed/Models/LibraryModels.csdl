@@ -11,10 +11,10 @@
     <Property Name="PublisherID" Type="Int32" />
     <Property Name="GenreID" Type="Int32" />
     <Property Name="LibraryID" Type="Int32" />
-    <NavigationProperty Name="Issueds" Relationship="Self.BookFK" FromRole="Book" ToRole="Issued" />
     <NavigationProperty Name="Genre" Relationship="Self.GenreFK" FromRole="Book" ToRole="Genre" />
     <NavigationProperty Name="Library" Relationship="Self.LibraryFK" FromRole="Book" ToRole="Library" />
     <NavigationProperty Name="Publisher" Relationship="Self.PublisherFK" FromRole="Book" ToRole="Publisher" />
+    <NavigationProperty Name="Issueds" Relationship="LibraryManagement2Model.BookFK" FromRole="Book" ToRole="Issued" />
   </EntityType>
   <EntityType Name="Employee">
     <Key>
@@ -25,9 +25,8 @@
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="RoleID" Type="Int32" />
     <Property Name="LibraryID" Type="Int32" />
-    <NavigationProperty Name="Issueds" Relationship="Self.EmployeeFK" FromRole="Employee" ToRole="Issued" />
     <NavigationProperty Name="Library" Relationship="Self.LibraryFK2" FromRole="Employee" ToRole="Library" />
-    <NavigationProperty Name="Role" Relationship="Self.RoleFK" FromRole="Employee" ToRole="Role" />
+    <NavigationProperty Name="Issueds" Relationship="LibraryManagement2Model.EmployeeFK" FromRole="Employee" ToRole="Issued" />
   </EntityType>
   <EntityType Name="Genre">
     <Key>
@@ -36,20 +35,6 @@
     <Property Name="GenreID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Books" Relationship="Self.GenreFK" FromRole="Genre" ToRole="Book" />
-  </EntityType>
-  <EntityType Name="Issued">
-    <Key>
-      <PropertyRef Name="IssueID" />
-    </Key>
-    <Property Name="IssueID" Type="Int32" Nullable="false" />
-    <Property Name="IssuedDate" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="ReturnDate" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="BookID" Type="Int32" />
-    <Property Name="EmployeeID" Type="Int32" />
-    <Property Name="MemberID" Type="Int32" />
-    <NavigationProperty Name="Book" Relationship="Self.BookFK" FromRole="Issued" ToRole="Book" />
-    <NavigationProperty Name="Employee" Relationship="Self.EmployeeFK" FromRole="Issued" ToRole="Employee" />
-    <NavigationProperty Name="Member" Relationship="Self.MemberFK" FromRole="Issued" ToRole="Member" />
   </EntityType>
   <EntityType Name="Library">
     <Key>
@@ -71,8 +56,8 @@
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="MembershipTypeID" Type="Int32" />
-    <NavigationProperty Name="Issueds" Relationship="Self.MemberFK" FromRole="Member" ToRole="Issued" />
     <NavigationProperty Name="MembershipType" Relationship="Self.MembershipTypeFK" FromRole="Member" ToRole="MembershipType" />
+    <NavigationProperty Name="Issueds" Relationship="LibraryManagement2Model.MemberFK" FromRole="Member" ToRole="Issued" />
   </EntityType>
   <EntityType Name="MembershipType">
     <Key>
@@ -91,26 +76,6 @@
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Books" Relationship="Self.PublisherFK" FromRole="Publisher" ToRole="Book" />
   </EntityType>
-  <EntityType Name="Role">
-    <Key>
-      <PropertyRef Name="RoleID" />
-    </Key>
-    <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="Employees" Relationship="Self.RoleFK" FromRole="Role" ToRole="Employee" />
-  </EntityType>
-  <Association Name="BookFK">
-    <End Role="Book" Type="Self.Book" Multiplicity="0..1" />
-    <End Role="Issued" Type="Self.Issued" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Book">
-        <PropertyRef Name="BookID" />
-      </Principal>
-      <Dependent Role="Issued">
-        <PropertyRef Name="BookID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="GenreFK">
     <End Role="Genre" Type="Self.Genre" Multiplicity="0..1" />
     <End Role="Book" Type="Self.Book" Multiplicity="*" />
@@ -147,18 +112,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="EmployeeFK">
-    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
-    <End Role="Issued" Type="Self.Issued" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Employee">
-        <PropertyRef Name="EmployeeID" />
-      </Principal>
-      <Dependent Role="Issued">
-        <PropertyRef Name="EmployeeID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="LibraryFK2">
     <End Role="Library" Type="Self.Library" Multiplicity="0..1" />
     <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
@@ -168,30 +121,6 @@
       </Principal>
       <Dependent Role="Employee">
         <PropertyRef Name="LibraryID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="RoleFK">
-    <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
-    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Role">
-        <PropertyRef Name="RoleID" />
-      </Principal>
-      <Dependent Role="Employee">
-        <PropertyRef Name="RoleID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="MemberFK">
-    <End Role="Member" Type="Self.Member" Multiplicity="0..1" />
-    <End Role="Issued" Type="Self.Issued" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Member">
-        <PropertyRef Name="MemberID" />
-      </Principal>
-      <Dependent Role="Issued">
-        <PropertyRef Name="MemberID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -211,16 +140,10 @@
     <EntitySet Name="Books" EntityType="Self.Book" />
     <EntitySet Name="Employees" EntityType="Self.Employee" />
     <EntitySet Name="Genres" EntityType="Self.Genre" />
-    <EntitySet Name="Issueds" EntityType="Self.Issued" />
     <EntitySet Name="Libraries" EntityType="Self.Library" />
     <EntitySet Name="Members" EntityType="Self.Member" />
     <EntitySet Name="MembershipTypes" EntityType="Self.MembershipType" />
     <EntitySet Name="Publishers" EntityType="Self.Publisher" />
-    <EntitySet Name="Roles" EntityType="Self.Role" />
-    <AssociationSet Name="BookFK" Association="Self.BookFK">
-      <End Role="Book" EntitySet="Books" />
-      <End Role="Issued" EntitySet="Issueds" />
-    </AssociationSet>
     <AssociationSet Name="GenreFK" Association="Self.GenreFK">
       <End Role="Genre" EntitySet="Genres" />
       <End Role="Book" EntitySet="Books" />
@@ -233,25 +156,76 @@
       <End Role="Publisher" EntitySet="Publishers" />
       <End Role="Book" EntitySet="Books" />
     </AssociationSet>
-    <AssociationSet Name="EmployeeFK" Association="Self.EmployeeFK">
-      <End Role="Employee" EntitySet="Employees" />
-      <End Role="Issued" EntitySet="Issueds" />
-    </AssociationSet>
     <AssociationSet Name="LibraryFK2" Association="Self.LibraryFK2">
       <End Role="Library" EntitySet="Libraries" />
       <End Role="Employee" EntitySet="Employees" />
-    </AssociationSet>
-    <AssociationSet Name="RoleFK" Association="Self.RoleFK">
-      <End Role="Role" EntitySet="Roles" />
-      <End Role="Employee" EntitySet="Employees" />
-    </AssociationSet>
-    <AssociationSet Name="MemberFK" Association="Self.MemberFK">
-      <End Role="Member" EntitySet="Members" />
-      <End Role="Issued" EntitySet="Issueds" />
     </AssociationSet>
     <AssociationSet Name="MembershipTypeFK" Association="Self.MembershipTypeFK">
       <End Role="MembershipType" EntitySet="MembershipTypes" />
       <End Role="Member" EntitySet="Members" />
     </AssociationSet>
+    <EntitySet Name="Issueds" EntityType="LibraryManagement2Model.Issued" />
+    <AssociationSet Name="BookFK" Association="LibraryManagement2Model.BookFK">
+      <End Role="Book" EntitySet="Books" />
+      <End Role="Issued" EntitySet="Issueds" />
+    </AssociationSet>
+    <AssociationSet Name="EmployeeFK" Association="LibraryManagement2Model.EmployeeFK">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Issued" EntitySet="Issueds" />
+    </AssociationSet>
+    <AssociationSet Name="MemberFK" Association="LibraryManagement2Model.MemberFK">
+      <End Role="Member" EntitySet="Members" />
+      <End Role="Issued" EntitySet="Issueds" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="Issued">
+    <Key>
+      <PropertyRef Name="IssueID" />
+    </Key>
+    <Property Name="IssueID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IssuedDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ReturnDate" Type="DateTime" Precision="0" />
+    <Property Name="BookID" Type="Int32" />
+    <Property Name="EmployeeID" Type="Int32" />
+    <Property Name="MemberID" Type="Int32" />
+    <NavigationProperty Name="Book" Relationship="LibraryManagement2Model.BookFK" FromRole="Issued" ToRole="Book" />
+    <NavigationProperty Name="Employee" Relationship="LibraryManagement2Model.EmployeeFK" FromRole="Issued" ToRole="Employee" />
+    <NavigationProperty Name="Member" Relationship="LibraryManagement2Model.MemberFK" FromRole="Issued" ToRole="Member" />
+  </EntityType>
+  <Association Name="BookFK">
+    <End Type="LibraryManagement2Model.Book" Role="Book" Multiplicity="0..1" />
+    <End Type="LibraryManagement2Model.Issued" Role="Issued" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Book">
+        <PropertyRef Name="BookID" />
+      </Principal>
+      <Dependent Role="Issued">
+        <PropertyRef Name="BookID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EmployeeFK">
+    <End Type="LibraryManagement2Model.Employee" Role="Employee" Multiplicity="0..1" />
+    <End Type="LibraryManagement2Model.Issued" Role="Issued" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeID" />
+      </Principal>
+      <Dependent Role="Issued">
+        <PropertyRef Name="EmployeeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MemberFK">
+    <End Type="LibraryManagement2Model.Member" Role="Member" Multiplicity="0..1" />
+    <End Type="LibraryManagement2Model.Issued" Role="Issued" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Member">
+        <PropertyRef Name="MemberID" />
+      </Principal>
+      <Dependent Role="Issued">
+        <PropertyRef Name="MemberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

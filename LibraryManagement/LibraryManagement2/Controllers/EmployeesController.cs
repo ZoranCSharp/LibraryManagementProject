@@ -20,7 +20,7 @@ namespace LibraryManagement2.Controllers
         // GET: Employees
         public ActionResult Index()
         {
-            var employees = db.Employees.Include(e => e.Library).Include(e => e.Role);
+            var employees = db.Employees.Include(e => e.Library);
             return View(employees.ToList());
         }
 
@@ -43,7 +43,7 @@ namespace LibraryManagement2.Controllers
         public ActionResult Create()
         {
             ViewBag.LibraryID = new SelectList(db.Libraries, "LibraryID", "Name");
-            ViewBag.RoleID = new SelectList(db.Roles, "RoleID", "Name");
+            
             return View();
         }
 
@@ -62,7 +62,7 @@ namespace LibraryManagement2.Controllers
             }
 
             ViewBag.LibraryID = new SelectList(db.Libraries, "LibraryID", "Name", employee.LibraryID);
-            ViewBag.RoleID = new SelectList(db.Roles, "RoleID", "Name", employee.RoleID);
+           
             return View(employee);
         }
 
@@ -79,7 +79,7 @@ namespace LibraryManagement2.Controllers
                 return HttpNotFound();
             }
             ViewBag.LibraryID = new SelectList(db.Libraries, "LibraryID", "Name", employee.LibraryID);
-            ViewBag.RoleID = new SelectList(db.Roles, "RoleID", "Name", employee.RoleID);
+            
             return View(employee);
         }
 
@@ -97,7 +97,7 @@ namespace LibraryManagement2.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.LibraryID = new SelectList(db.Libraries, "LibraryID", "Name", employee.LibraryID);
-            ViewBag.RoleID = new SelectList(db.Roles, "RoleID", "Name", employee.RoleID);
+            
             return View(employee);
         }
 

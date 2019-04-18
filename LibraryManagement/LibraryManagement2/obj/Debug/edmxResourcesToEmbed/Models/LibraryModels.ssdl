@@ -35,7 +35,7 @@
     </Key>
     <Property Name="IssueID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IssuedDate" Type="date" Nullable="false" />
-    <Property Name="ReturnDate" Type="date" Nullable="false" />
+    <Property Name="ReturnDate" Type="date" />
     <Property Name="BookID" Type="int" />
     <Property Name="EmployeeID" Type="int" />
     <Property Name="MemberID" Type="int" />
@@ -72,13 +72,6 @@
       <PropertyRef Name="PublisherID" />
     </Key>
     <Property Name="PublisherID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
-  </EntityType>
-  <EntityType Name="Role">
-    <Key>
-      <PropertyRef Name="RoleID" />
-    </Key>
-    <Property Name="RoleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <Association Name="BookFK">
@@ -177,18 +170,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="RoleFK">
-    <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
-    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Role">
-        <PropertyRef Name="RoleID" />
-      </Principal>
-      <Dependent Role="Employee">
-        <PropertyRef Name="RoleID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <EntityContainer Name="LibraryManagement2ModelStoreContainer">
     <EntitySet Name="Book" EntityType="Self.Book" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
@@ -198,7 +179,6 @@
     <EntitySet Name="Member" EntityType="Self.Member" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="MembershipType" EntityType="Self.MembershipType" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Publisher" EntityType="Self.Publisher" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="BookFK" Association="Self.BookFK">
       <End Role="Book" EntitySet="Book" />
       <End Role="Issued" EntitySet="Issued" />
@@ -230,10 +210,6 @@
     <AssociationSet Name="PublisherFK" Association="Self.PublisherFK">
       <End Role="Publisher" EntitySet="Publisher" />
       <End Role="Book" EntitySet="Book" />
-    </AssociationSet>
-    <AssociationSet Name="RoleFK" Association="Self.RoleFK">
-      <End Role="Role" EntitySet="Role" />
-      <End Role="Employee" EntitySet="Employee" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

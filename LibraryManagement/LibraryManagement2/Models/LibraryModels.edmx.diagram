@@ -8,21 +8,19 @@
         <EntityTypeShape EntityType="LibraryManagement2Model.Book" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="LibraryManagement2Model.Employee" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="LibraryManagement2Model.Genre" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="LibraryManagement2Model.Issued" Width="1.5" PointX="8.25" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="LibraryManagement2Model.Library" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
         <EntityTypeShape EntityType="LibraryManagement2Model.Member" Width="1.5" PointX="6" PointY="8.25" IsExpanded="true" />
         <EntityTypeShape EntityType="LibraryManagement2Model.MembershipType" Width="1.5" PointX="3.75" PointY="8.5" IsExpanded="true" />
         <EntityTypeShape EntityType="LibraryManagement2Model.Publisher" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="LibraryManagement2Model.Role" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
-        <AssociationConnector Association="LibraryManagement2Model.BookFK" ManuallyRouted="false" />
         <AssociationConnector Association="LibraryManagement2Model.GenreFK" ManuallyRouted="false" />
         <AssociationConnector Association="LibraryManagement2Model.LibraryFK" ManuallyRouted="false" />
         <AssociationConnector Association="LibraryManagement2Model.PublisherFK" ManuallyRouted="false" />
-        <AssociationConnector Association="LibraryManagement2Model.EmployeeFK" ManuallyRouted="false" />
         <AssociationConnector Association="LibraryManagement2Model.LibraryFK2" ManuallyRouted="false" />
-        <AssociationConnector Association="LibraryManagement2Model.RoleFK" ManuallyRouted="false" />
-        <AssociationConnector Association="LibraryManagement2Model.MemberFK" ManuallyRouted="false" />
         <AssociationConnector Association="LibraryManagement2Model.MembershipTypeFK" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="LibraryManagement2Model.Issued" Width="1.5" PointX="8.25" PointY="5.875" />
+        <AssociationConnector Association="LibraryManagement2Model.BookFK" />
+        <AssociationConnector Association="LibraryManagement2Model.EmployeeFK" />
+        <AssociationConnector Association="LibraryManagement2Model.MemberFK" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

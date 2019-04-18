@@ -28,11 +28,10 @@ namespace LibraryManagement2.Models
         public virtual DbSet<Book> Books { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Genre> Genres { get; set; }
-        public virtual DbSet<Issued> Issueds { get; set; }
         public virtual DbSet<Library> Libraries { get; set; }
         public virtual DbSet<Member> Members { get; set; }
         public virtual DbSet<MembershipType> MembershipTypes { get; set; }
         public virtual DbSet<Publisher> Publishers { get; set; }
-        public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<Issued> Issueds { get; set; }
     }
 }

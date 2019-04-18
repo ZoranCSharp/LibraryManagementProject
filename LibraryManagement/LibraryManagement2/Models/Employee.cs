@@ -26,9 +26,8 @@ namespace LibraryManagement2.Models
         public Nullable<int> RoleID { get; set; }
         public Nullable<int> LibraryID { get; set; }
     
+        public virtual Library Library { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Issued> Issueds { get; set; }
-        public virtual Library Library { get; set; }
-        public virtual Role Role { get; set; }
     }
 }

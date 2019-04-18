@@ -180,7 +180,6 @@
     <Compile Include="Controllers\MembersController.cs" />
     <Compile Include="Controllers\MembershipTypesController.cs" />
     <Compile Include="Controllers\PublishersController.cs" />
-    <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -224,9 +223,6 @@
       <DependentUpon>LibraryModels.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Publisher.cs">
-      <DependentUpon>LibraryModels.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Role.cs">
       <DependentUpon>LibraryModels.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -332,11 +328,6 @@
     <Content Include="Views\Publishers\Details.cshtml" />
     <Content Include="Views\Publishers\Edit.cshtml" />
     <Content Include="Views\Publishers\Index.cshtml" />
-    <Content Include="Views\Roles\Create.cshtml" />
-    <Content Include="Views\Roles\Delete.cshtml" />
-    <Content Include="Views\Roles\Details.cshtml" />
-    <Content Include="Views\Roles\Edit.cshtml" />
-    <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Employees\Create.cshtml" />
     <Content Include="Views\Employees\Delete.cshtml" />
     <Content Include="Views\Employees\Details.cshtml" />

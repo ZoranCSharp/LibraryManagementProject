@@ -28,10 +28,10 @@ namespace LibraryManagement2.Models
         public Nullable<int> GenreID { get; set; }
         public Nullable<int> LibraryID { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Issued> Issueds { get; set; }
         public virtual Genre Genre { get; set; }
         public virtual Library Library { get; set; }
         public virtual Publisher Publisher { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Issued> Issueds { get; set; }
     }
 }

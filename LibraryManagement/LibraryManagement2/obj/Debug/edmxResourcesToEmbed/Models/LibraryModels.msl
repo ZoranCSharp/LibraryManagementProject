@@ -33,18 +33,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Issueds">
-      <EntityTypeMapping TypeName="LibraryManagement2Model.Issued">
-        <MappingFragment StoreEntitySet="Issued">
-          <ScalarProperty Name="IssueID" ColumnName="IssueID" />
-          <ScalarProperty Name="IssuedDate" ColumnName="IssuedDate" />
-          <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
-          <ScalarProperty Name="BookID" ColumnName="BookID" />
-          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
-          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Libraries">
       <EntityTypeMapping TypeName="LibraryManagement2Model.Library">
         <MappingFragment StoreEntitySet="Library">
@@ -83,11 +71,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Roles">
-      <EntityTypeMapping TypeName="LibraryManagement2Model.Role">
-        <MappingFragment StoreEntitySet="Role">
-          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
+    <EntitySetMapping Name="Issueds">
+      <EntityTypeMapping TypeName="LibraryManagement2Model.Issued">
+        <MappingFragment StoreEntitySet="Issued">
+          <ScalarProperty Name="MemberID" ColumnName="MemberID" />
+          <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+          <ScalarProperty Name="BookID" ColumnName="BookID" />
+          <ScalarProperty Name="ReturnDate" ColumnName="ReturnDate" />
+          <ScalarProperty Name="IssuedDate" ColumnName="IssuedDate" />
+          <ScalarProperty Name="IssueID" ColumnName="IssueID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

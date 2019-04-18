@@ -16,7 +16,7 @@ namespace LibraryManagement2.Models
     {
         public int IssueID { get; set; }
         public System.DateTime IssuedDate { get; set; }
-        public System.DateTime ReturnDate { get; set; }
+        public Nullable<System.DateTime> ReturnDate { get; set; }
         public Nullable<int> BookID { get; set; }
         public Nullable<int> EmployeeID { get; set; }
         public Nullable<int> MemberID { get; set; }
