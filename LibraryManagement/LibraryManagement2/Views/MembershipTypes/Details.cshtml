@@ -1,34 +1,35 @@
 ﻿@model LibraryManagement2.Models.MembershipType
+<div class="jumbotron2">
+    @{
+        ViewBag.Title = "Details";
+    }
 
-@{
-    ViewBag.Title = "Details";
-}
+    <h2>Details Membership Type</h2>
 
-<h2>Details</h2>
+    <div>
 
-<div>
-    <h4>MembershipType</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Price)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Price)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.MembershipTypeID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.MembershipTypeID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+    </div>

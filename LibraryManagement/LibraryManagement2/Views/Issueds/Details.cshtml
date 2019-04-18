@@ -1,58 +1,64 @@
 ﻿@model LibraryManagement2.Models.Issued
+<div class="jumbotron2">
+    @{
+        ViewBag.Title = "Details";
+    }
 
-@{
-    ViewBag.Title = "Details";
-}
+    <h2>Details</h2>
+    @{ 
+        var issuedDate = Model.IssuedDate.ToString("dddd, dd MMMM yyyy");
+        
 
-<h2>Details</h2>
+        string returnDate = Model.ReturnDate.HasValue ? Model.ReturnDate.Value.ToString("dddd, dd MMMM yyyy") : null;
+    }
+    <div>
+        
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                Issued date
+            </dt>
 
-<div>
-    <h4>Issued</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.IssuedDate)
-        </dt>
+            <dd>
+                @issuedDate
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.IssuedDate)
-        </dd>
+            <dt>
+                Return date
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReturnDate)
-        </dt>
+            <dd>
+                @returnDate
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReturnDate)
-        </dd>
+            <dt>
+                Title
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Book.Title)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Book.Title)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Book.Title)
-        </dd>
+            <dt>
+                Employee
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Employee.FullName)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Employee.FullName)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Employee.FullName)
-        </dd>
+            <dt>
+                Member
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Member.FullName)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Member.FullName)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Member.FullName)
-        </dd>
-
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.IssueID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.IssueID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+    </div>

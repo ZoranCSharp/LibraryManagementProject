@@ -1,44 +1,45 @@
 ﻿@model LibraryManagement2.Models.Employee
+<div class="jumbotron2">
+    @{
+        ViewBag.Title = "Details";
+    }
 
-@{
-    ViewBag.Title = "Details";
-}
+    <h2>Employee details</h2>
 
-<h2>Details</h2>
+    <div>
+  
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+              Full name
+            </dt>
 
-<div>
-    <h4>Employee</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.FullName)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.FullName)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.FullName)
-        </dd>
+            <dt>
+               E-mail
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
+            <dt>
+                Library
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Library.Name)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Library.Name)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.Library.Name)
-        </dd>
 
-        
 
-    </dl>
-</div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.EmployeeID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.EmployeeID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+    </div>

@@ -1,64 +1,70 @@
 ﻿@model LibraryManagement2.Models.Issued
-
-@{
-    ViewBag.Title = "Delete";
-}
-
-<h2>Delete</h2>
-
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Issued</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.IssuedDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.IssuedDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ReturnDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ReturnDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Book.Title)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Book.Title)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Employee.FullName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Employee.FullName)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Member.FullName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Member.FullName)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
+<div class="jumbotron2">
+    @{
+        ViewBag.Title = "Delete";
     }
-</div>
+
+    <h2>Delete rental</h2>
+    @{
+        var issuedDate = Model.IssuedDate.ToString("dddd, dd MMMM yyyy");
+
+
+        string returnDate = Model.ReturnDate.HasValue ? Model.ReturnDate.Value.ToString("dddd, dd MMMM yyyy") : null;
+    }
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                Issued date
+            </dt>
+
+            <dd>
+                @issuedDate
+            </dd>
+
+            <dt>
+                Return date
+            </dt>
+
+            <dd>
+                @returnDate
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Book.Title)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Book.Title)
+            </dd>
+
+            <dt>
+                Employee
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Employee.FullName)
+            </dd>
+
+            <dt>
+                Member
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Member.FullName)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>

@@ -32,13 +32,20 @@
             @foreach (var item in Model)
             {
                 var date = item.IssuedDate.ToString("dddd, dd MMMM yyyy");
+
                 
+
+                string st = item.ReturnDate.HasValue ? item.ReturnDate.Value.ToString("dddd, dd MMMM yyyy") : null;
+
+
+
+
                 <tr>
                     <td>
-                        @Html.DisplayFor(modelItem => item.IssuedDate)
+                        @date
                     </td>
                     <td>
-                       @Html.DisplayFor(modelItem => item.ReturnDate)
+                       @st
                     </td>
                     <td>
                         @Html.DisplayFor(modelItem => item.Book.Title)
@@ -50,9 +57,17 @@
                         @Html.DisplayFor(modelItem => item.Member.FullName)
                     </td>
                     <td>
-                        @Html.ActionLink("Edit", "Edit", new {id = item.IssueID}) |
-                        @Html.ActionLink("Details", "Details", new {id = item.IssueID}) |
-                        @Html.ActionLink("Delete", "Delete", new {id = item.IssueID})
+                        @if (!User.IsInRole("CanManageBooks") && item.ReturnDate != null)
+                        {
+                            @Html.ActionLink("Details", "Details", new { id = item.IssueID })<text>&nbsp;|</text>
+                            @Html.ActionLink("Delete", "Delete", new { id = item.IssueID })<text>&nbsp;</text>
+                        }
+                        else
+                        {
+                            @Html.ActionLink("Edit", "Edit", new { id = item.IssueID })<text>&nbsp;|</text>
+                            @Html.ActionLink("Details", "Details", new { id = item.IssueID })<text>&nbsp;|</text>
+                            @Html.ActionLink("Delete", "Delete", new { id = item.IssueID })<text>&nbsp;</text>
+                        }
                     </td>
                 </tr>
             }

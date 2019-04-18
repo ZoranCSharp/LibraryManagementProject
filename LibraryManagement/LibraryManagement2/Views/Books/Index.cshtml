@@ -4,7 +4,7 @@
             ViewBag.Title = "Index";
         }
 
-        <h2>Index</h2>
+        <h2>Books</h2>
 
         <p>
             @Html.ActionLink("Create New", "Create")
@@ -21,12 +21,15 @@
                     @Html.DisplayNameFor(model => model.Quantity)
                 </th>
                 <th>
+                    Genre
                     @Html.DisplayNameFor(model => model.Genre.Name)
                 </th>
                 <th>
+                    Library
                     @Html.DisplayNameFor(model => model.Library.Name)
                 </th>
                 <th>
+                    Publisher
                     @Html.DisplayNameFor(model => model.Publisher.Name)
                 </th>
                 <th></th>

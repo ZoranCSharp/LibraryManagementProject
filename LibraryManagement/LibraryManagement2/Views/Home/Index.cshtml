@@ -3,23 +3,33 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <div>
-        @if (User.IsInRole("CanManageBooks")) { 
-
-        @Html.ActionLink("MEMBERSHIP TYPES", "Index", "MembershipTypes")<br />
-        @Html.ActionLink("EMPLOYEES", "Index", "Employees")<br />
-        @Html.ActionLink("GENRES", "Index", "Genres")<br />
-        @Html.ActionLink("PUBLISHERS", "Index", "Publishers")<br />
-        @Html.ActionLink("LIBRARIES", "Index", "Libraries")<br />
-      
+    <div class="jumbotron">
+        @if (User.IsInRole("CanManageBooks"))
+        {
+            <table class="table1">
+                <tr>
+                    <th> @Html.ActionLink("MEMBERSHIP TYPES", "Index", "MembershipTypes", null, new { @class = "mainMiddle" })</th>                   
+                </tr>                
+                <tr>
+                    <th> @Html.ActionLink("EMPLOYEES", "Index", "Employees", null, new { @class = "mainMiddle" })</th>
+                </tr>
+                <tr>
+                    <th>@Html.ActionLink("GENRES", "Index", "Genres", null, new { @class = "mainMiddle" })</th>
+                </tr>
+                <tr>
+                    <th>@Html.ActionLink("PUBLISHERS", "Index", "Publishers", null, new { @class = "mainMiddle" })</th>
+                </tr>
+                <tr>
+                    <th> @Html.ActionLink("LIBRARIES", "Index", "Libraries", null, new { @class = "mainMiddle" })</th>
+                </tr>
+            </table>
         }
         else
         {
             <h1>PUBLIC LIBRARY</h1>
-        <div>Today is  @DateTime.Now.DayOfWeek, time: @DateTime.Now.Hour:@DateTime.Now.Minute</div>
+            <div>Today is  @DateTime.Now.DayOfWeek, time: @DateTime.Now.Hour:@DateTime.Now.Minute</div>
 
         }
+               
     </div>
-</div>
 

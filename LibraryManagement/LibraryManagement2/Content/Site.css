@@ -78,3 +78,24 @@ textarea {
     margin-left:5%;
 }
 
+a.mainMiddle {
+    color: #fff;
+    text-decoration: none;   
+}
+
+a.mainMiddle:hover {
+    color: #3677fd;
+}
+
+.table1 th {
+    text-align: center;
+    font-size: 25px;
+    border-bottom: solid 2px white;
+    padding:5px;
+}
+
+.table1 {
+    margin: 0 auto;
+   
+}
+
