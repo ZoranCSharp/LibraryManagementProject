@@ -103,3 +103,6 @@ a.mainMiddle {
     text-decoration: none;
 }
 
+    a.mainMiddle:hover {
+        color: #3677fd;
+    }
