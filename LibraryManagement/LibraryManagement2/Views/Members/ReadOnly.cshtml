@@ -1,51 +1,78 @@
 ﻿@model IEnumerable<LibraryManagement2.Models.Member>
-    <div class="jumbotron2">
-        @{
-            ViewBag.Title = "ReadOnly";
+<div class="jumbotron2">
+    @{
+        ViewBag.Title = "ReadOnly";
+    }
+
+    <h2>MEMBERS</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+
+        <input class="myInput" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for members..">
+    </p>
+    <table id="myTable" class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FullName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MembershipType.Name)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MembershipType.Name)
+                </td>
+                <td>
+
+                    @Html.ActionLink("Details", "Details", new { id = item.MemberID })
+
+                </td>
+            </tr>
         }
 
-        <h2>Index</h2>
+    </table>
+</div>
+<script>
+    function myFunction() {
+        // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
 
-
-        <table class="table">
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.FullName)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Email)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Phone)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.MembershipType.Name)
-                </th>
-                <th></th>
-            </tr>
-
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.FullName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Email)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Phone)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.MembershipType.Name)
-                    </td>
-                    <td>
-
-                        @Html.ActionLink("Details", "Details", new { id = item.MemberID })
-
-                    </td>
-                </tr>
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
             }
-
-        </table>
-        </div>
+        }
+    }
+</script>

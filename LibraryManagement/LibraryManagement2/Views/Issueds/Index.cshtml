@@ -1,76 +1,101 @@
 ﻿@model IEnumerable<LibraryManagement2.Models.Issued>
-    <div class="jumbotron2">
-        @{
-            ViewBag.Title = "Index";
-        }
+<div class="jumbotron2">
+    @{
+        ViewBag.Title = "Index";
+    }
 
-        <h2>RENTAL</h2>
+    <h2>RENTAL</h2>
 
-        <p>
-            @Html.ActionLink("Create New", "Create")
-        </p>
-        <table class="table">
-            <tr>
-                <th>
-                    Date
-                </th>
-                <th>
-                    Return Date
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Book.Title)
-                </th>
-                <th>
-                    Issued by 
-                </th>
-                <th>
-                    Member
-                </th>
-                <th></th>
-            </tr>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+
+        <input class="myInput" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for rentals..">
+    </p>
+    <table id="myTable" class="table">
+        <tr>
+            <th>
+                Date
+            </th>
+            <th>
+                Return Date
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Book.Title)
+            </th>
+            <th>
+                Issued by 
+            </th>
+            <th>
+                Member
+            </th>
+            <th></th>
+        </tr>
            
-            @foreach (var item in Model)
-            {
-                var date = item.IssuedDate.ToString("dddd, dd MMMM yyyy");
+        @foreach (var item in Model)
+        {
+            var date = item.IssuedDate.ToString("dddd, dd MMMM yyyy");
 
                 
 
-                string st = item.ReturnDate.HasValue ? item.ReturnDate.Value.ToString("dddd, dd MMMM yyyy") : null;
+            string st = item.ReturnDate.HasValue ? item.ReturnDate.Value.ToString("dddd, dd MMMM yyyy") : null;
 
 
 
 
-                <tr>
-                    <td>
-                        @date
-                    </td>
-                    <td>
-                       @st
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Book.Title)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Employee.FullName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Member.FullName)
-                    </td>
-                    <td>
-                        @if (!User.IsInRole("CanManageBooks") && item.ReturnDate != null)
-                        {
-                            @Html.ActionLink("Details", "Details", new { id = item.IssueID })<text>&nbsp;|</text>
-                            @Html.ActionLink("Delete", "Delete", new { id = item.IssueID })<text>&nbsp;</text>
-                        }
-                        else
-                        {
-                            @Html.ActionLink("Edit", "Edit", new { id = item.IssueID })<text>&nbsp;|</text>
-                            @Html.ActionLink("Details", "Details", new { id = item.IssueID })<text>&nbsp;|</text>
-                            @Html.ActionLink("Delete", "Delete", new { id = item.IssueID })<text>&nbsp;</text>
-                        }
-                    </td>
-                </tr>
+            <tr>
+                <td>
+                    @date
+                </td>
+                <td>
+                    @st
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Book.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Employee.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Member.FullName)
+                </td>
+                <td>
+                    @if (!User.IsInRole("CanManageBooks") && item.ReturnDate != null)
+                    {
+                        @Html.ActionLink("Details", "Details", new { id = item.IssueID })<text>&nbsp;|</text>
+                        @Html.ActionLink("Delete", "Delete", new { id = item.IssueID })<text>&nbsp;</text>
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Edit", "Edit", new { id = item.IssueID })<text>&nbsp;|</text>
+                        @Html.ActionLink("Details", "Details", new { id = item.IssueID })<text>&nbsp;|</text>
+                        @Html.ActionLink("Delete", "Delete", new { id = item.IssueID })<text>&nbsp;</text>
+                    }
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+<script>
+    function myFunction() {
+        // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[4];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
             }
-
-        </table>
-        </div>
+        }
+    }
+</script>

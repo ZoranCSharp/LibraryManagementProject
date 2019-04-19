@@ -33,7 +33,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.ReturnDate, "Return Date", htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.EditorFor(model => returnDate, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.EditorFor(model => returnDate, new { htmlAttributes = new { @class = "form-control", placeholder = "YYYY-MM-DD" } })
                     @Html.ValidationMessageFor(model => model.ReturnDate, "", new { @class = "text-danger" })
                 </div>
             </div>

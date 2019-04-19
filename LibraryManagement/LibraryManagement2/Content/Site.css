@@ -65,7 +65,7 @@ textarea {
 .podNaslov p {
     text-align: center;
     font-size:18px;
-    font-weight:thin;
+    font-weight:bold;
 }
 
 .loginBtn {
@@ -77,16 +77,16 @@ textarea {
 .checkbox{
     margin-left:5%;
 }
-
-a.mainMiddle {
-    color: #fff;
-    text-decoration: none;   
+.myInput {
+    color: black;
+    border: 2px solid #008ae6;
+    float: right;
+    border-radius: 5px;
 }
 
-a.mainMiddle:hover {
-    color: #3677fd;
+.search {
+    padding-bottom: 2em;
 }
-
 .table1 th {
     text-align: center;
     font-size: 25px;
@@ -96,6 +96,10 @@ a.mainMiddle:hover {
 
 .table1 {
     margin: 0 auto;
-   
+
+}
+a.mainMiddle {
+    color: #fff;
+    text-decoration: none;
 }
 

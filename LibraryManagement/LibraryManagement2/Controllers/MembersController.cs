@@ -46,7 +46,7 @@ namespace LibraryManagement2.Controllers
         }
 
         // GET: Members/Create
-        [Authorize(Roles = "CanManageBooks")]
+        //[Authorize(Roles = "CanManageBooks")]
         public ActionResult Create()
         {
             ViewBag.MembershipTypeID = new SelectList(db.MembershipTypes, "MembershipTypeID", "Name");
@@ -57,14 +57,21 @@ namespace LibraryManagement2.Controllers
         
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "CanManageBooks")]
+        //[Authorize(Roles = "CanManageBooks")]
         public ActionResult Create([Bind(Include = "MemberID,FullName,Email,Phone,MembershipTypeID")] Member member)
         {
             if (ModelState.IsValid)
             {
                 db.Members.Add(member);
                 db.SaveChanges();
+                if (User.IsInRole("CanManageBooks"))
+                {
                 return RedirectToAction("Index");
+                }
+                else
+                {
+                return RedirectToAction("ReadOnly");
+                }
             }
 
             ViewBag.MembershipTypeID = new SelectList(db.MembershipTypes, "MembershipTypeID", "Name", member.MembershipTypeID);

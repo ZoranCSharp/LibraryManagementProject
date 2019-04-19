@@ -51,7 +51,7 @@ namespace LibraryManagement2.Controllers
         }
 
         // GET: Books/Create
-        [Authorize(Roles = "CanManageBooks")]
+        //[Authorize(Roles = "CanManageBooks")]
         public ActionResult Create()
         {
             ViewBag.GenreID = new SelectList(db.Genres, "GenreID", "Name");
@@ -70,7 +70,13 @@ namespace LibraryManagement2.Controllers
             {
                 db.Books.Add(book);
                 db.SaveChanges();
+                if (User.IsInRole("CanManageBooks")) { 
                 return RedirectToAction("Index");
+                }
+                else
+                {
+                    return RedirectToAction("ReadOnly");
+                }
             }
 
             ViewBag.GenreID = new SelectList(db.Genres, "GenreID", "Name", book.GenreID);

@@ -1,68 +1,95 @@
 ﻿@model IEnumerable<LibraryManagement2.Models.Book>
-    <div class="jumbotron2">
-        @{
-            ViewBag.Title = "Index";
+<div class="jumbotron2">
+    @{
+        ViewBag.Title = "Index";
+    }
+
+    <h2>Books</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+        
+
+       @*input for search field*@   
+        <input class="myInput" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for books..">
+    </p>
+    <table id="myTable" class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                Genre
+                @Html.DisplayNameFor(model => model.Genre.Name)
+            </th>
+            <th>
+                Library
+                @Html.DisplayNameFor(model => model.Library.Name)
+            </th>
+            <th>
+                Publisher
+                @Html.DisplayNameFor(model => model.Publisher.Name)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Genre.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Library.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Publisher.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.BookID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.BookID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.BookID })
+                </td>
+            </tr>
         }
 
-        <h2>Books</h2>
+    </table>
+</div>
+<script>
+    function myFunction() {
+        // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
 
-        <p>
-            @Html.ActionLink("Create New", "Create")
-        </p>
-        <table class="table">
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Title)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Author)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Quantity)
-                </th>
-                <th>
-                    Genre
-                    @Html.DisplayNameFor(model => model.Genre.Name)
-                </th>
-                <th>
-                    Library
-                    @Html.DisplayNameFor(model => model.Library.Name)
-                </th>
-                <th>
-                    Publisher
-                    @Html.DisplayNameFor(model => model.Publisher.Name)
-                </th>
-                <th></th>
-            </tr>
-
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Title)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Author)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Quantity)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Genre.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Library.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Publisher.Name)
-                    </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = item.BookID }) |
-                        @Html.ActionLink("Details", "Details", new { id = item.BookID }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = item.BookID })
-                    </td>
-                </tr>
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
             }
-
-        </table>
-        </div>
+        }
+    }
+</script>

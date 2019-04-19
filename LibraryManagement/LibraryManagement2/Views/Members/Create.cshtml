@@ -55,9 +55,17 @@
         </div>
     }
 
-    <div>
-        @Html.ActionLink("Back to List", "Index")
-    </div>
+    @if (User.IsInRole("CanManageRols"))
+    {
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+    else
+    {<div>
+         @Html.ActionLink("Back to List", "ReadOnly")
+     </div>
+    }
 
     @section Scripts {
         @Scripts.Render("~/bundles/jqueryval")
