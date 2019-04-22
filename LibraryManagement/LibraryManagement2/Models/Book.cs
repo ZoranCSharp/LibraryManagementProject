@@ -11,7 +11,8 @@ namespace LibraryManagement2.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Book
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,8 +22,12 @@ namespace LibraryManagement2.Models
         }
     
         public int BookID { get; set; }
+        [Required]
         public string Title { get; set; }
+        [Required]
         public string Author { get; set; }
+        [Required]
+        [Range(1,Double.MaxValue, ErrorMessage = "Quantity must be at least 1")]
         public int Quantity { get; set; }
         public Nullable<int> PublisherID { get; set; }
         public Nullable<int> GenreID { get; set; }

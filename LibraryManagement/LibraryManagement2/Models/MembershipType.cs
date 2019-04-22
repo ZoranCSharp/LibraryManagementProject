@@ -11,7 +11,8 @@ namespace LibraryManagement2.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class MembershipType
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,6 +22,7 @@ namespace LibraryManagement2.Models
         }
     
         public int MembershipTypeID { get; set; }
+        [Required]
         public string Name { get; set; }
         public decimal Price { get; set; }
     

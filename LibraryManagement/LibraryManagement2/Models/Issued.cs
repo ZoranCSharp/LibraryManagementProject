@@ -11,10 +11,12 @@ namespace LibraryManagement2.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Issued
     {
         public int IssueID { get; set; }
+        [Required]
         public System.DateTime IssuedDate { get; set; }
         public Nullable<System.DateTime> ReturnDate { get; set; }
         public Nullable<int> BookID { get; set; }
