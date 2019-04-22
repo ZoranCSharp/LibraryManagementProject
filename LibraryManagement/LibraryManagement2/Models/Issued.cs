@@ -18,6 +18,7 @@ namespace LibraryManagement2.Models
         public int IssueID { get; set; }
         [Required]
         public System.DateTime IssuedDate { get; set; }
+        [DateValidation]
         public Nullable<System.DateTime> ReturnDate { get; set; }
         public Nullable<int> BookID { get; set; }
         public Nullable<int> EmployeeID { get; set; }

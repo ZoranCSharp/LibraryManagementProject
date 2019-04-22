@@ -54,56 +54,48 @@ namespace LibraryManagement2.Controllers
         }
 
         // POST: Issueds/Create
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "IssueID,IssuedDate,ReturnDate,BookID,EmployeeID,MemberID")] Issued issued)
         {
             var books = db.Books.ToList();
-            var iss1 = issued.BookID;
-            var book = new Book();
-            var book1 = db.Books.First(b => b.BookID == iss1);
-
-            System.Diagnostics.Debug.WriteLine("Knjiga " + book.Title + "----" + book1.Quantity);
-
+            var issId = issued.BookID;
+            var book1 = db.Books.First(b => b.BookID == issId);
 
 
             if (ModelState.IsValid)
             {
-
-
-
-                if ((issued.ReturnDate == null) && (book1.Quantity > 0))
+                if ((!issued.ReturnDate.HasValue) && (book1.Quantity > 0))
                 {
-
-                    book1.Quantity--;
-
-                    db.SaveChanges();
-
-
-                    System.Diagnostics.Debug.WriteLine("Izdata " + iss1 + "stanje " + book1.Quantity);
+                   book1.Quantity--;
+                   db.SaveChanges();
                 }
                 else if (book1.Quantity == 0)
                 {
                     return RedirectToAction("NotInStock");
 
                 }
-                if (issued.ReturnDate != null)
+                if (issued.ReturnDate.HasValue)
                 {
-                    book1.Quantity++;
-                    db.SaveChanges();
-                    System.Diagnostics.Debug.WriteLine("Vracena " + iss1 + "stanje " + book1.Quantity);
+                    //DateTime dt = issued.ReturnDate.Value;
+                    //DateTime dti = issued.IssuedDate;
+                    //if (DateTime.Compare(dt, dti)>=0)
+                    //{
+                        book1.Quantity++;
+                        db.SaveChanges();
+                    //}
+                    //else
+                    //{
 
-                }
-
+                    }
+                  
+  
+                
 
                 db.Issueds.Add(issued);
-
                 db.SaveChanges();
 
-
                 return RedirectToAction("Index");
-
             }
 
             ViewBag.BookID = new SelectList(db.Books, "BookID", "Title", issued.BookID);
@@ -151,7 +143,6 @@ namespace LibraryManagement2.Controllers
                 {
                     book1.Quantity++;
                     db.SaveChanges();
-                    System.Diagnostics.Debug.WriteLine("Vracena " + book1.Title + "stanje " + book1.Quantity);
 
                 }
                 db.Entry(issued).State = EntityState.Modified;

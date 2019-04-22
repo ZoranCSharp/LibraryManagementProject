@@ -187,6 +187,7 @@
     <Compile Include="Models\Book.cs">
       <DependentUpon>LibraryModels.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\DateValidation.cs" />
     <Compile Include="Models\Employee.cs">
       <DependentUpon>LibraryModels.tt</DependentUpon>
     </Compile>

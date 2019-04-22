@@ -27,7 +27,7 @@ namespace LibraryManagement2.Models
         [Required]
         public string Author { get; set; }
         [Required]
-        [Range(1,Double.MaxValue, ErrorMessage = "Quantity must be at least 1")]
+        [Range(0, Double.MaxValue, ErrorMessage = "Quantity can't be negative value")]
         public int Quantity { get; set; }
         public Nullable<int> PublisherID { get; set; }
         public Nullable<int> GenreID { get; set; }
