@@ -65,15 +65,16 @@
         </dl>
     </div>
     <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.BookID }) |
+      
 
         @if (User.IsInRole("CanManageBooks"))
         {
+            @Html.ActionLink("Edit", "Edit", new { id = Model.BookID }) <text> | </text>
             @Html.ActionLink("Back to List", "Index")
-        }
-        else
-        {
-            @Html.ActionLink("Back to List", "ReadOnly")
-        }
+}
+else
+{
+    @Html.ActionLink("Back to List", "ReadOnly")
+}
     </p>
     </div>
