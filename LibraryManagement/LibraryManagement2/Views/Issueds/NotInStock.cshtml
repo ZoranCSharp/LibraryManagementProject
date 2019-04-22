@@ -1,0 +1,18 @@
+﻿@model IEnumerable<LibraryManagement2.Models.Issued>
+<div class="jumbotron2">
+    @{
+        ViewBag.Title = "NotInStock";
+    }
+    @foreach (var item in Model)
+    {
+
+        var q = item.Book.Quantity;
+        if (q == 0)
+        {
+
+            <h2>@Html.DisplayFor(modelItem => item.Book.Title) out of stock</h2>
+
+            break;
+        }
+    }
+</div>

@@ -345,6 +345,7 @@
     <Content Include="Views\Issueds\Details.cshtml" />
     <Content Include="Views\Issueds\Edit.cshtml" />
     <Content Include="Views\Issueds\Index.cshtml" />
+    <Content Include="Views\Issueds\NotInStock.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
