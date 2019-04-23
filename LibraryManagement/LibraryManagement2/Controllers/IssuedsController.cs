@@ -77,21 +77,12 @@ namespace LibraryManagement2.Controllers
                 }
                 if (issued.ReturnDate.HasValue)
                 {
-                    //DateTime dt = issued.ReturnDate.Value;
-                    //DateTime dti = issued.IssuedDate;
-                    //if (DateTime.Compare(dt, dti)>=0)
-                    //{
+                    
                         book1.Quantity++;
                         db.SaveChanges();
-                    //}
-                    //else
-                    //{
 
-                    }
-                  
-  
-                
-
+                }
+          
                 db.Issueds.Add(issued);
                 db.SaveChanges();
 
